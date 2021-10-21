@@ -29,17 +29,17 @@ public class Duplicate {
         return array;
     }
 
-   static public boolean containsDuplicates(List<Integer> input){
+    static public boolean containsDuplicates(List<Integer> input){
         boolean flag = false;
 
-       Collections.sort(input);
+        Collections.sort(input);
 
-       for (int i = 0; i < input.size(); i++) {
+        for (int i = 0; i < input.size(); i++) {
 
-                if(input.get(i)==input.get(i+1)) flag = true;
+            if(input.get(i)==input.get(i+1)) flag = true;
 
-                if(flag ==true ) break;
-         }
+            if(flag ==true ) break;
+        }
 
         return flag;
 
@@ -53,8 +53,6 @@ public class Duplicate {
         ArrayList<Integer> array = new
                 ArrayList<Integer>(size); // массив
 
-        Map<Integer,Integer> rezult = new HashMap<>(); // map с результатами поиска
-
         array = fillArray(array, size); // заполнение
 
         if(containsDuplicates(array)) System.out.println(RESULT+ ": "+TRUE);
@@ -64,4 +62,3 @@ public class Duplicate {
 
 
 }
-
