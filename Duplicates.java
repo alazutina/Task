@@ -9,6 +9,12 @@ public class Duplicates {
     final static String FALSE = "false";
     final static String TRUE = "true";
     final static String NO_DUB = "Дубликатов нет";
+    final static String NUM = "Число ";
+    final static String REPEAT =" повторяется ";
+    final static String TIME = " раза";
+
+
+
 
     static ArrayList<Integer> fillArray(ArrayList<Integer> array, int size){ // заполнение массива значениями
         Random r = new Random();
@@ -55,13 +61,13 @@ public class Duplicates {
         return result;
     }
 
-    static void printRezult(Map<Integer,Integer> rezult){
+    static void PrintRezult(Map<Integer,Integer> rezult){
         if(rezult.size()==0){
             System.out.println(RESULT+ ": " +FALSE);
             System.out.println(NO_DUB);
         }
         else{
-            System.out.println("Result: true");
+            System.out.println(RESULT+": "+true);
 
             for(Map.Entry<Integer, Integer> entry: rezult.entrySet()) {
                 // get key
@@ -69,7 +75,7 @@ public class Duplicates {
                 // get value
                 Integer value = entry.getValue();
 
-                System.out.println("Число "+key+" повторяется "+value +" раза");
+                System.out.println(NUM+key+REPEAT+value +TIME);
             }
 
 
@@ -90,7 +96,7 @@ public class Duplicates {
 
         rezult = Search(array,size); // поиск
 
-        printRezult(rezult); // вывод
+        PrintRezult(rezult); // вывод
 
     }
 
